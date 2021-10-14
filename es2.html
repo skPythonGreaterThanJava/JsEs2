@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>JS ES 2</title>
+    </head>
+    <body>
+        <h1>JS Es 2</h1>
+        <h2>Static HTML page: exercise 1 but with jQuery</h2>
+
+        <div id="div1"></div>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            var rosho = true;
+            $("#div1").html("Non pigiare il bottone pls");
+            $("body").append($("<button id='btn1'>BONKAMI</button>").click(function(){
+                if(rosho) {
+                    $("#div1").attr("style", "background-color: rgb(255, 0, 0)");
+                    rosho = false;
+                } else {
+                    $("#div1").attr("style", "background-color: rgb(255, 255, 255)");
+                    rosho = true;
+                }
+            }));
+            $("#div1").html("Ti avevo detto di non premere MONA!!");
+            $("body").append($("<h3>Ciao sono un titolo h3</h3>"));
+            
+        </script>
+    </body>
+</html> 
